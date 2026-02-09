@@ -6,6 +6,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img1 from "../assets/images/banner/1.jpg";
 import img2 from "../assets/images/banner/2.jpg";
+import img4 from "../assets/images/banner/4.jpg";
+import img5 from "../assets/images/banner/5.jpg";
+import img6 from "../assets/images/banner/6.jpg";
 import img3 from "../assets/images/banner/3.jpeg";
 
 const HeroSlider = () => {
@@ -23,6 +26,26 @@ const HeroSlider = () => {
       img: img2,
       heading: "City Life",
       text: "Discover the amazing city vibes",
+    },
+    {
+      img: img3,
+      heading: "Technology World",
+      text: "Innovations that change the world",
+    },
+    {
+      img: img4,
+      heading: "Technology World",
+      text: "Innovations that change the world",
+    },
+    {
+      img: img5,
+      heading: "Technology World",
+      text: "Innovations that change the world",
+    },
+    {
+      img: img6,
+      heading: "Technology World",
+      text: "Innovations that change the world",
     },
     {
       img: img3,
@@ -53,20 +76,7 @@ const HeroSlider = () => {
               alt={slide.heading}
               className="w-full h-[65vh] object-cover brightness-95 "
             />
-            {/* <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 text-center text-white px-4">
-              <h1
-                className="text-4xl text-[#6F3827] md:text-6xl font-bold mb-4"
-                data-aos="fade" // 👈 yahan fade use karo instead of fade-down
-              >
-                {slide.heading}
-              </h1>
-              <p
-                className="text-lg md:text-2xl"
-                data-aos="fade" // 👈 yahan bhi fade use karo
-              >
-                {slide.text}
-              </p>
-            </div> */}
+            
           </div>
         ))}
       </Slider>
