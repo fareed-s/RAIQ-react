@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import Products from "./components/Products";
 import Footer from "./components/Footer";
 import Categories from "./components/Categories";
-import AnimatedBackground from "./components/AnimatedBackground";
 
 const App = () => {
   return (
@@ -13,7 +12,6 @@ const App = () => {
       <Header />
       <HeroSlider />
 
-      <AnimatedBackground />
       <Categories />
       <Products />
 
