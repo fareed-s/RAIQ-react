@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Loader from "./Loader";
+
 import cat1 from "../assets/images/Dried Apple.jpg";
 import cat2 from "../assets/images/Dried Tomato.jpg";
 import cat3 from "../assets/images/Ginger Powder.jpg";
@@ -27,7 +31,7 @@ const categories = [
     link: "https://openmarket.pk/collections/spices-powders",
   },
   {
-    id: 3,
+    id: 4,
     title: "Herbal & Functional Ingredients",
     desc: "Pure & aromatic spices for taste",
     img: cat4,
@@ -36,10 +40,22 @@ const categories = [
 ];
 
 const Categories = () => {
+  const [loading, setLoading] = useState(false);
+
+  const handleRedirect = (url) => {
+    setLoading(true);
+
+    setTimeout(() => {
+      window.location.href = url;
+    }, 2000);
+  };
+
   return (
-    <section className="bg-[#F5E9D9] py-20">
+    <section className="bg-[#F5E9D9] py-20 relative">
+      {/* Loader */}
+      {loading && <Loader />}
+
       <div className="max-w-7xl mx-auto px-6">
-        {/* Heading */}
         <h2 className="text-5xl font-extrabold text-center text-[#643023] mb-6">
           Shop by Category
         </h2>
@@ -47,14 +63,11 @@ const Categories = () => {
           Choose from our wide range of premium categories
         </p>
 
-        {/* Category Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {categories.map((cat, index) => (
-            <a
+            <div
               key={cat.id}
-              href={cat.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={() => handleRedirect(cat.link)}
               className="group relative overflow-hidden rounded-3xl shadow-xl cursor-pointer"
               data-aos="zoom-in"
               data-aos-delay={index * 150}
@@ -62,20 +75,19 @@ const Categories = () => {
               <img
                 src={cat.img}
                 alt={cat.title}
-                loading="lazy"
                 className="w-full h-104 object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
-              <div className="absolute inset-0 hover:bg-black/50 bg-linear-to-t from-black/70 flex flex-col justify-end p-8">
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 hover:bg-black/50 flex flex-col justify-end p-8">
                 <h3 className="text-3xl font-bold text-white mb-2">
                   {cat.title}
                 </h3>
                 <p className="text-[#F5E9D9] mb-4">{cat.desc}</p>
                 <span className="text-yellow-400 font-semibold">
-                  View Category 
+                  View Category →
                 </span>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

@@ -1,64 +1,72 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { productss } from "../components/data";
-
-
+import Loader from "./Loader";
 
 const AnimatedBackground = () => {
   const containerRef = useRef(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const container = containerRef.current;
 
-    // Total 3 sets create karo (original + 2 copies)
+    // 3 sets (original + 2 copies)
     for (let i = 0; i < 2; i++) {
       const children = Array.from(container.children);
-      children.forEach(child => {
+      children.forEach((child) => {
         const clone = child.cloneNode(true);
         container.appendChild(clone);
       });
     }
 
-    // GSAP seamless loop with 33.33% movement
     gsap.to(container, {
-      x: "-33.33%", // Ab 33.33% move karega
+      x: "-33.33%",
       ease: "linear",
       duration: 20,
       repeat: -1,
       modifiers: {
         x: (x) => {
           const value = parseFloat(x);
-          // Reset when reach -33.33%
           return (value % -33.33) + "%";
-        }
-      }
+        },
+      },
     });
   }, []);
 
+  const handleRedirect = (url) => {
+    setLoading(true);
+
+    setTimeout(() => {
+      window.location.href = url;
+    }, 2000);
+  };
+
   return (
     <div className="w-full overflow-hidden relative h-55 bg-[#CFB999]">
+      {/* Loader */}
+      {loading && <Loader />}
+
       <div
         ref={containerRef}
         className="flex items-center h-full"
-        style={{ whiteSpace: "nowrap", display: "flex" }}
+        style={{ whiteSpace: "nowrap" }}
       >
         {productss.map((brand, i) => (
-          <a
+          <div
             key={i}
-            href={brand.buyLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-shrink-0 mx-2 relative"
+            onClick={() => handleRedirect(brand.buyLink)}
+            className="flex-shrink-0 mx-2 relative cursor-pointer"
           >
             <img
               src={brand.img}
               alt={brand.name}
               className="h-48 w-auto object-cover rounded-xl shadow-lg"
             />
+
             <div className="absolute bottom-2 left-2 bg-black/50 px-2 py-1 rounded text-white text-sm font-semibold">
               {brand.name}
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>
