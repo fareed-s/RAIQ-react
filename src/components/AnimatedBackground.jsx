@@ -42,7 +42,7 @@ const AnimatedBackground = () => {
   };
 
   return (
-    <div className="w-full overflow-hidden relative h-55 bg-[#CFB999]">
+    <div className="w-full overflow-hidden relative h-55 bg-[#9c8666]">
       {/* Loader */}
       {loading && <Loader />}
 
