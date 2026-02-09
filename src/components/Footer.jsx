@@ -8,7 +8,7 @@ const Footer = () => {
 
         {/* Brand Info */}
         <div>
-          <h2 className="text-3xl text-[#643023] font-extrabold mb-4">Premium Dried Foods</h2>
+          <h2 className="text-3xl  font-extrabold mb-4">Premium Dried Foods</h2>
           <p className="text-sm leading-relaxed text-[#E8D7C3]">
             We provide high-quality dried fruits, vegetables & spices.
             100% natural, hygienic and full of flavor.
@@ -30,7 +30,7 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-bold mb-4">Contact Us</h3>
           <p className="text-sm text-[#E8D7C3] mb-2">📞 +92 300 1234567</p>
-          <p className="text-sm text-[#E8D7C3] mb-6">📧 info@premiumfoods.com</p>
+          <p className="text-sm text-[#E8D7C3] mb-6">📧 contact@raiqtraders.com</p>
 
           <div className="flex gap-4">
             <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-400 text-black hover:scale-110 transition">
