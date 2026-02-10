@@ -51,12 +51,21 @@ const Categories = () => {
   };
 
   return (
-    <section className="bg-[#F5E9D9] py-20 relative">
+    <section className="bg-[#F5E9D9] py-10 sm:py-20 relative">
       {/* Loader */}
       {loading && <Loader />}
 
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-5xl font-extrabold text-center text-[#643023] mb-6">
+      <div className="max-w-7xl mx-auto px-3">
+        <h2
+          className="
+  text-3xl sm:text-5xl
+  font-extrabold
+  text-center
+  text-[#643023]
+  mb-6
+  whitespace-nowrap
+"
+        >
           Shop by Category
         </h2>
         <p className="text-center text-[#643023] mb-14 text-lg">

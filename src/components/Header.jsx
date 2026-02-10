@@ -4,7 +4,7 @@ import logo from "../assets/images/logo.png";
 
 const Header = () => {
   return (
-    <nav className="w-full bg-white py-3">
+   <nav className="w-full bg-white py-3 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center justify-start md:justify-center md:flex-1">

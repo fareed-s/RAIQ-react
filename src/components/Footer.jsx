@@ -73,7 +73,7 @@ const Footer = () => {
             href="https://code5.com.pk/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-yellow-400 hover:text-yellow-500 font-semibold"
+            className="text-yellow-400 hover:text-yellow-500 font-semibold "
           >
             {" "}
             Code5 Technology

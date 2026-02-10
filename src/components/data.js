@@ -11,6 +11,51 @@ import img10 from "../assets/images/Hari Mirch.jpg";
 import img11 from "../assets/images/Ginger Powder.jpg";
 import img12 from "../assets/images/Garlic Powder.jpg";
 import img13 from "../assets/images/Ajwa Dats.jpg";
+import img16 from "../assets/images/banner/4.jpg";
+import img17 from "../assets/images/banner/5.jpg";
+import img18 from "../assets/images/banner/6.jpg";
+import m1 from "../assets/images/banner/m1.jpg";
+import m2 from "../assets/images/banner/m2.jpg";
+import m3 from "../assets/images/banner/m3.jpg";
+
+
+export const desktopSlides = [
+
+  {
+    img: img16,
+    heading: "Technology World",
+    text: "Innovations that change the world",
+  },
+  {
+    img: img17,
+    heading: "Technology World",
+    text: "Innovations that change the world",
+  },
+  {
+    img: img18,
+    heading: "Technology World",
+    text: "Innovations that change the world",
+  },
+];
+
+export const mobileSlides = [
+  {
+    img: m1,
+    heading: "City Life",
+    text: "Discover the amazing city vibes",
+  },
+  {
+    img: m2,
+    heading: "Technology World",
+    text: "Innovations that change the world",
+  },
+  {
+    img: m3,
+    heading: "Technology World",
+    text: "Innovations that change the world",
+  },
+ 
+];
 
 export const products = [
   {
