@@ -36,7 +36,7 @@ const Products = () => {
 
       {/* Heading */}
       <h2
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-[#643023] mb-4 sm:mb-6"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-center leading-relaxed text-[#643023] mb-4 sm:mb-6"
         data-aos="fade-down"
       >
         Our Products
