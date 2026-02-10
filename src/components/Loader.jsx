@@ -1,27 +1,43 @@
 import React from "react";
-import loaderImg from "../assets/images/loadeer.png"; // aapka custom image path
+import loaderImg from "../assets/images/logo.png";
 
 const Loader = () => {
   return (
-    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 backdrop-blur-sm">
-      <div className="relative w-40 h-40 sm:w-48 sm:h-48">
-        {/* Circular spinning lines */}
+    <div className="fixed inset-0 flex items-center justify-center z-50 backdrop-blur-sm">
+      <div
+        className="
+      relative
+      w-36 h-36
+      sm:w-44 sm:h-44
+      md:w-52 md:h-52
+      lg:w-60 lg:h-60
+    "
+      >
+        {/* Spinning circles */}
         <div className="absolute inset-0 rounded-full border-4 border-yellow-400 border-t-transparent animate-spin"></div>
         <div className="absolute inset-0 rounded-full border-4 border-yellow-500 border-t-transparent animate-spin-slow"></div>
         <div className="absolute inset-0 rounded-full border-4 border-yellow-300 border-t-transparent animate-spin-reverse"></div>
 
-        {/* Center Image - Bigger and properly centered */}
-        <div className="absolute inset-0 flex items-center justify-center">
+        {/* Center logo */}
+        <div className="absolute inset-0 flex items-center justify-center rounded-full  p-1">
           <img
             src={loaderImg}
             alt="Loading..."
-            className="w-23 h-23 rounded-full sm:w-24 sm:h-24 object-contain animate-pulse-slow"
+            className="
+          w-[65%] h-[65%]
+          sm:w-[68%] sm:h-[68%]
+          md:w-[70%] md:h-[70%]
+          object-contain
+          brightness-200
+        "
           />
         </div>
-        
-        {/* Loading text */}
+
+        {/* Text */}
         <div className="absolute -bottom-10 left-0 right-0 text-center">
-          <p className="text-white font-semibold text-lg animate-pulse">Loading...</p>
+          <p className="text-white font-semibold text-base sm:text-lg animate-pulse">
+            Loading...
+          </p>
         </div>
       </div>
     </div>
