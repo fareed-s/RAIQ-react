@@ -66,10 +66,10 @@ const HeroSlider = () => {
             />
 
             {/* optional text */}
-            <div className="absolute bottom-5 left-5 text-white">
+            {/* <div className="absolute bottom-5 left-5 text-white">
               <h2 className="text-lg sm:text-3xl font-bold">{slide.heading}</h2>
               <p className="text-sm sm:text-lg">{slide.text}</p>
-            </div>
+            </div> */}
           </div>
         ))}
       </Slider>
