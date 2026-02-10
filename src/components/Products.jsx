@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { products } from "../components/data";
-import Loader from "./Loader";
+// import Loader from "./Loader";
 
 const Products = () => {
   const [loading, setLoading] = useState(false);
@@ -25,7 +25,7 @@ const Products = () => {
     setRedirectUrl(url);
 
     setTimeout(() => {
-      window.location.href = url; // redirect after 2 sec
+      window.location.href = url; 
     }, 1500);
   };
 
