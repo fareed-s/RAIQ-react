@@ -47,7 +47,7 @@ const Categories = () => {
 
     setTimeout(() => {
       window.location.href = url;
-    }, 2000);
+    }, 1500);
   };
 
   return (

@@ -26,7 +26,7 @@ const Products = () => {
 
     setTimeout(() => {
       window.location.href = url; // redirect after 2 sec
-    }, 2000);
+    }, 1500);
   };
 
   return (
